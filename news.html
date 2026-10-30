@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+     news.html — Sichuan Fukangsi Electric Power Technology Co., Ltd.
+     新闻动态页 | Industrial B2B style (blue-grey) | Inline CSS only
+     修改提示：
+       - 新闻正文：原文未保留文章全文，此处为分类筛选 + 文章卡片占位
+       - 标题 / 日期 / 摘要：替换下方 [PLACEHOLDER: ...] 文本
+       - 图片：在 <img src="" alt="..."> 的 src 中填入图片路径
+     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO: Meta Title / Meta Description -->
+<title>News | Sichuan Fukangsi Electric Power Technology Co., Ltd.</title>
+<meta name="description" content="Company news and industry updates from Sichuan Fukangsi Electric Power Technology Co., Ltd. — diesel generator set assembly, sales, rental and service.">
+<meta name="keywords" content="diesel generator set, Cummins genset, silent generator, trailer generator, marine generator">
+<style>
+/* ============ CSS 变量：改这里即可调整全站配色 ============ */
+:root{
+  --navy:#1f3a5f;        /* 主深蓝 */
+  --navy-dark:#16293f;   /* 更深蓝（footer/导航hover） */
+  --steel:#3b5b7e;       /* 钢蓝（次级强调） */
+  --grey-bg:#eef1f5;     /* 浅灰背景 */
+  --grey-line:#d4dae2;   /* 分隔线 */
+  --white:#ffffff;
+  --text:#2b3340;        /* 正文深灰 */
+  --muted:#5c6a7a;       /* 辅助文字 */
+  --accent:#c0392b;      /* 按钮强调红（询盘按钮） */
+}
+/* ============ 基础重置 ============ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Segoe UI",Arial,Helvetica,sans-serif;color:var(--text);background:var(--white);line-height:1.65;font-size:16px;}
+img{max-width:100%;display:block;}
+a{color:var(--steel);text-decoration:none;}
+a:hover{color:var(--navy);}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;}
+/* ============ 顶部导航（全站统一） ============ */
+.site-header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.15);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo a{color:#fff;font-size:17px;font-weight:700;line-height:1.3;display:block;}
+.logo span{display:block;font-size:11px;font-weight:400;color:#b9c8da;letter-spacing:.4px;margin-top:2px;}
+.nav{display:flex;gap:26px;}
+.nav a{color:#e6ecf3;font-size:14px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent;transition:.2s;}
+.nav a:hover,.nav a.active{color:#fff;border-bottom-color:#7fa6d3;}
+/* 移动端汉堡菜单 */
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;}
+@media(max-width:860px){
+  .nav-toggle{display:block;}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;padding:10px 20px 16px;gap:4px;}
+  .nav.open{display:flex;}
+  .nav a{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+}
+/* ============ 页面标题区 ============ */
+.page-head{background:linear-gradient(180deg,#16293f 0%,#1f3a5f 100%);color:#fff;padding:46px 0 40px;}
+.page-head h1{font-size:28px;font-weight:700;margin-bottom:10px;}
+.page-head p{color:#b9c8da;font-size:15px;max-width:820px;}
+/* ============ 分类筛选 ============ */
+.filter{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 26px;}
+.filter button{border:1px solid var(--grey-line);background:var(--white);color:var(--muted);padding:7px 16px;border-radius:20px;font-size:14px;cursor:pointer;transition:.2s;}
+.filter button.active,.filter button:hover{background:var(--navy);border-color:var(--navy);color:#fff;}
+/* ============ 新闻卡片 ============ */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media(max-width:960px){.news-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.news-grid{grid-template-columns:1fr;}}
+.news-card{background:var(--white);border:1px solid var(--grey-line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:.2s;}
+.news-card:hover{box-shadow:0 6px 16px rgba(31,58,95,.12);transform:translateY(-2px);}
+.news-thumb{background:#dfe5ec;aspect-ratio:16/9;}
+.news-thumb img{width:100%;height:100%;object-fit:cover;}
+.news-body{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1;}
+.news-date{font-size:12px;color:var(--muted);margin-bottom:8px;}
+.news-title{font-size:16px;font-weight:600;color:var(--navy);line-height:1.4;margin-bottom:8px;}
+.news-excerpt{font-size:14px;color:var(--muted);margin-bottom:14px;flex:1;}
+.read-more{font-size:13px;font-weight:600;color:var(--steel);}
+.read-more:hover{color:var(--navy);}
+/* ============ CTA 横幅 ============ */
+.cta{background:var(--navy);color:#fff;text-align:center;padding:44px 20px;}
+.cta h2{font-size:24px;font-weight:700;margin-bottom:8px;}
+.cta p{color:#b9c8da;margin-bottom:18px;}
+.btn-quote{display:inline-block;padding:9px 20px;background:var(--accent);color:#fff;border-radius:4px;font-size:14px;font-weight:600;transition:.2s;}
+.btn-quote:hover{background:#a93226;color:#fff;}
+/* ============ Footer（全站统一） ============ */
+.site-footer{background:var(--navy-dark);color:#aebbcb;padding:44px 0 20px;font-size:14px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px;margin-bottom:26px;}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr;}}
+.footer-grid h4{color:#fff;font-size:15px;margin-bottom:12px;}
+.footer-grid p,.footer-grid li{line-height:1.8;}
+.footer-grid ul{list-style:none;}
+.footer-grid a{color:#aebbcb;}
+.footer-grid a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;text-align:center;font-size:13px;color:#7f90a6;}
+</style>
+</head>
+<body>
+
+<!-- ================= 顶部导航（6 个页面互通） ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="home.html">Sichuan Fukangsi Electric Power<br>Technology Co., Ltd.</a>
+      <span>Diesel Generator Sets · Assembly · Sales · Rental · Service</span>
+    </div>
+    <nav class="nav" id="siteNav">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cases.html">Project Cases</a>
+      <a href="about.html">About Us</a>
+      <a href="news.html" class="active">News</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <button class="nav-toggle" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= 页面标题区 ================= -->
+<section class="page-head">
+  <div class="container">
+    <h1>News</h1>
+    <p>Company news and industry updates from Sichuan Fukangsi Electric Power Technology Co., Ltd.</p>
+  </div>
+</section>
+
+<!-- ================= 分类筛选 ================= -->
+<section class="section" style="padding-top:10px;">
+  <div class="container">
+    <div class="filter">
+      <button class="active" onclick="filterNews('all', this)">All</button>
+      <button onclick="filterNews('company', this)">Company News</button>
+      <button onclick="filterNews('industry', this)">Industry News</button>
+      <button onclick="filterNews('guide', this)">Buying Guide</button>
+    </div>
+
+    <!-- ============ 新闻卡片列表（占位内容，请替换 [PLACEHOLDER: ...]） ============ -->
+    <div class="news-grid" id="newsGrid">
+      <!-- 公司新闻：示例卡片 -->
+      <article class="news-card" data-cat="company">
+        <div class="news-thumb"><img src="images/news_company1.jpg" alt="Fuksons company news - diesel generator three-filter maintenance guide"></div>
+        <div class="news-body">
+          <div class="news-date">2026-XX-XX</div>
+          <h3 class="news-title">[PLACEHOLDER: Company news title]</h3>
+          <p class="news-excerpt">[PLACEHOLDER: Short excerpt of the article. Replace this text with the actual summary before publishing.]</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </article>
+      <article class="news-card" data-cat="company">
+        <div class="news-thumb"><img src="images/news_company2.jpg" alt="Fuksons company news - Cummins genset crankshaft troubleshooting"></div>
+        <div class="news-body">
+          <div class="news-date">2026-XX-XX</div>
+          <h3 class="news-title">[PLACEHOLDER: Company news title]</h3>
+          <p class="news-excerpt">[PLACEHOLDER: Short excerpt of the article. Replace this text with the actual summary before publishing.]</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </article>
+      <!-- 行业动态：示例卡片 -->
+      <article class="news-card" data-cat="industry">
+        <div class="news-thumb"><img src="images/news_industry1.jpg" alt="Fuksons industry news - how to choose a silent generator set supplier"></div>
+        <div class="news-body">
+          <div class="news-date">2026-XX-XX</div>
+          <h3 class="news-title">[PLACEHOLDER: Industry news title]</h3>
+          <p class="news-excerpt">[PLACEHOLDER: Short excerpt of the article. Replace this text with the actual summary before publishing.]</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </article>
+      <article class="news-card" data-cat="industry">
+        <div class="news-thumb"><img src="images/news_industry2.jpg" alt="Fuksons industry news - generator industry updates"></div>
+        <div class="news-body">
+          <div class="news-date">2026-XX-XX</div>
+          <h3 class="news-title">[PLACEHOLDER: Industry news title]</h3>
+          <p class="news-excerpt">[PLACEHOLDER: Short excerpt of the article. Replace this text with the actual summary before publishing.]</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </article>
+      <!-- 采购指南：示例卡片 -->
+      <article class="news-card" data-cat="guide">
+        <div class="news-thumb"><img src="images/news_industry1.jpg" alt="Fuksons buying guide - selecting the right silent genset"></div>
+        <div class="news-body">
+          <div class="news-date">2026-XX-XX</div>
+          <h3 class="news-title">[PLACEHOLDER: Buying guide title]</h3>
+          <p class="news-excerpt">[PLACEHOLDER: Short excerpt of the article. Replace this text with the actual summary before publishing.]</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </article>
+      <article class="news-card" data-cat="guide">
+        <div class="news-thumb"><img src="images/news_company2.jpg" alt="Fuksons buying guide - genset maintenance and repair tips"></div>
+        <div class="news-body">
+          <div class="news-date">2026-XX-XX</div>
+          <h3 class="news-title">[PLACEHOLDER: Buying guide title]</h3>
+          <p class="news-excerpt">[PLACEHOLDER: Short excerpt of the article. Replace this text with the actual summary before publishing.]</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA 横幅 ================= -->
+<section class="cta">
+  <div class="container">
+    <h2>Need a generator solution?</h2>
+    <p>We support international inquiry. Send us your requirements and we will respond within 24 hours.</p>
+    <a href="contact.html" class="btn-quote">Get Quote</a>
+  </div>
+</section>
+
+<!-- ================= Footer（全站统一） ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Sichuan Fukangsi Electric Power Technology Co., Ltd.</h4>
+        <p>Genset assembly, direct sales, rental and on-site repair &amp; maintenance service. Engineering and production follow CAD / CAE / CAM methods.</p>
+        <p style="margin-top:8px;">We support international inquiry.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cases.html">Project Cases</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Mr. Lin</p>
+        <p>Mobile / WhatsApp: +86 132 1907 3688</p>
+        <p>Tel: +86 28 8610 3591</p>
+        <p>Email: 46469551@qq.com</p>
+        <p>Group 2, Gaoqiao Village, Anjing Town, Pidu District (formerly Pixian), Chengdu, Sichuan, China</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Sichuan Fukangsi Electric Power Technology Co., Ltd. All rights reserved. We support international inquiry.</div>
+  </div>
+</footer>
+
+<script>
+/* ============ 分类筛选：点击按钮过滤新闻卡片 ============ */
+function filterNews(cat, btn){
+  // 切换按钮高亮
+  document.querySelectorAll('.filter button').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  // 按 data-cat 过滤卡片
+  document.querySelectorAll('#newsGrid .news-card').forEach(function(card){
+    if(cat === 'all' || card.getAttribute('data-cat') === cat){
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
