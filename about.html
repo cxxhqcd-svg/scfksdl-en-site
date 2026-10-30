@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+     about.html — Sichuan Fukangsi Electric Power Technology Co., Ltd.
+     关于我们页 | Industrial B2B style (blue-grey) | Inline CSS only
+     修改提示：
+       - 文字：直接改下方 <body> 内的英文文本
+       - 图片：在 <img src="" alt="..."> 的 src 中填入图片路径
+       - 证书区：预留空白占位，拿到证书后替换 [IMG: business license] 处
+     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO: Meta Title / Meta Description（对应文案 §7） -->
+<title>About Us | Sichuan Fukangsi Electric Power Technology Co., Ltd.</title>
+<meta name="description" content="Genset assembly, sales, rental and on-site repair & maintenance in Chengdu, China. Land gensets 3-3000 kW, trailer generators 15-600 kW, marine gensets 12-1000 kW.">
+<meta name="keywords" content="diesel generator set, Cummins genset, silent generator, trailer generator, marine generator">
+<style>
+/* ============ CSS 变量：改这里即可调整全站配色 ============ */
+:root{
+  --navy:#1f3a5f;        /* 主深蓝 */
+  --navy-dark:#16293f;   /* 更深蓝（footer/导航hover） */
+  --steel:#3b5b7e;       /* 钢蓝（次级强调） */
+  --grey-bg:#eef1f5;     /* 浅灰背景 */
+  --grey-line:#d4dae2;   /* 分隔线 */
+  --white:#ffffff;
+  --text:#2b3340;        /* 正文深灰 */
+  --muted:#5c6a7a;       /* 辅助文字 */
+  --accent:#c0392b;      /* 按钮强调红（询盘按钮） */
+}
+/* ============ 基础重置 ============ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Segoe UI",Arial,Helvetica,sans-serif;color:var(--text);background:var(--white);line-height:1.65;font-size:16px;}
+img{max-width:100%;display:block;}
+a{color:var(--steel);text-decoration:none;}
+a:hover{color:var(--navy);}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;}
+/* ============ 顶部导航（全站统一） ============ */
+.site-header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.15);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo a{color:#fff;font-size:17px;font-weight:700;line-height:1.3;display:block;}
+.logo span{display:block;font-size:11px;font-weight:400;color:#b9c8da;letter-spacing:.4px;margin-top:2px;}
+.nav{display:flex;gap:26px;}
+.nav a{color:#e6ecf3;font-size:14px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent;transition:.2s;}
+.nav a:hover,.nav a.active{color:#fff;border-bottom-color:#7fa6d3;}
+/* 移动端汉堡菜单 */
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;}
+@media(max-width:860px){
+  .nav-toggle{display:block;}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;padding:10px 20px 16px;gap:4px;}
+  .nav.open{display:flex;}
+  .nav a{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+}
+/* ============ 页面标题区 ============ */
+.page-head{background:linear-gradient(180deg,#16293f 0%,#1f3a5f 100%);color:#fff;padding:46px 0 40px;}
+.page-head h1{font-size:28px;font-weight:700;margin-bottom:10px;}
+.page-head p{color:#b9c8da;font-size:15px;max-width:820px;}
+/* ============ 通用区块标题 ============ */
+.section{padding:52px 0;}
+.section-title{font-size:24px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.section-sub{color:var(--muted);font-size:15px;margin-bottom:28px;max-width:760px;}
+.section-title::after{content:"";display:block;width:46px;height:3px;background:var(--steel);margin-top:10px;}
+/* ============ 公司简介 ============ */
+.profile{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
+@media(max-width:860px){.profile{grid-template-columns:1fr;}}
+.profile p{font-size:15px;margin-bottom:14px;color:var(--text);}
+.profile ul{list-style:none;margin-top:10px;}
+.profile li{font-size:14px;padding:8px 0;border-bottom:1px dashed var(--grey-line);}
+.profile li strong{color:var(--navy);display:block;font-size:15px;margin-bottom:2px;}
+.profile .contact-box{background:var(--grey-bg);border:1px solid var(--grey-line);border-radius:8px;padding:20px;}
+.profile .contact-box h4{color:var(--navy);font-size:16px;margin-bottom:12px;}
+.profile .contact-box p{font-size:14px;margin-bottom:6px;}
+/* ============ 能力 / 业务范围 ============ */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+@media(max-width:860px){.info-grid{grid-template-columns:1fr;}}
+.info-box{background:var(--grey-bg);border:1px solid var(--grey-line);border-radius:8px;padding:22px;}
+.info-box h3{font-size:17px;color:var(--navy);margin-bottom:10px;}
+.info-box ul{list-style:none;}
+.info-box li{font-size:14px;padding:7px 0;border-bottom:1px dashed var(--grey-line);}
+.info-box li:last-child{border-bottom:0;}
+.info-box li strong{color:var(--navy);}
+/* ============ 厂区相册 ============ */
+.album-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+@media(max-width:960px){.album-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.album-grid{grid-template-columns:1fr;}}
+.album-item{background:#dfe5ec;border:1px solid var(--grey-line);border-radius:6px;overflow:hidden;aspect-ratio:4/3;}
+.album-item img{width:100%;height:100%;object-fit:cover;}
+/* ============ 证书区（留白占位） ============ */
+.cert-area{background:var(--grey-bg);border:1px dashed var(--steel);border-radius:8px;padding:30px;text-align:center;}
+.cert-area p{font-size:14px;color:var(--muted);margin-top:10px;max-width:640px;margin-left:auto;margin-right:auto;}
+.cert-placeholder{width:180px;height:240px;background:#fff;border:1px solid var(--grey-line);border-radius:4px;margin:0 auto;display:flex;align-items:center;justify-content:center;color:#a6b2c0;font-size:13px;}
+/* ============ CTA 横幅 ============ */
+.cta{background:var(--navy);color:#fff;text-align:center;padding:44px 20px;}
+.cta h2{font-size:24px;font-weight:700;margin-bottom:8px;}
+.cta p{color:#b9c8da;margin-bottom:18px;}
+.btn-quote{display:inline-block;padding:9px 20px;background:var(--accent);color:#fff;border-radius:4px;font-size:14px;font-weight:600;transition:.2s;}
+.btn-quote:hover{background:#a93226;color:#fff;}
+/* ============ Footer（全站统一） ============ */
+.site-footer{background:var(--navy-dark);color:#aebbcb;padding:44px 0 20px;font-size:14px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px;margin-bottom:26px;}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr;}}
+.footer-grid h4{color:#fff;font-size:15px;margin-bottom:12px;}
+.footer-grid p,.footer-grid li{line-height:1.8;}
+.footer-grid ul{list-style:none;}
+.footer-grid a{color:#aebbcb;}
+.footer-grid a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;text-align:center;font-size:13px;color:#7f90a6;}
+</style>
+</head>
+<body>
+
+<!-- ================= 顶部导航（6 个页面互通） ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="home.html">Sichuan Fukangsi Electric Power<br>Technology Co., Ltd.</a>
+      <span>Diesel Generator Sets · Assembly · Sales · Rental · Service</span>
+    </div>
+    <nav class="nav" id="siteNav">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cases.html">Project Cases</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <button class="nav-toggle" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= 页面标题区 ================= -->
+<section class="page-head">
+  <div class="container">
+    <h1>About Us</h1>
+    <p>Sichuan Fukangsi Electric Power Technology Co., Ltd. — genset assembly, sales, rental and on-site repair &amp; maintenance service from Chengdu, China.</p>
+  </div>
+</section>
+
+<!-- ================= 公司简介 ================= -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Company Profile</h2>
+    <div class="profile">
+      <div>
+        <p>Sichuan Fukangsi Electric Power Technology Co., Ltd., based in Chengdu, China, supplies diesel generator sets to industrial and commercial customers.</p>
+        <p>Core business: genset assembly, sales, rental, and on-site repair &amp; maintenance service. The product range covers land diesel gensets from 3 to 3,000 kW, trailer-mounted mobile generators from 15 to 600 kW, and marine emergency gensets from 12 to 1,000 kW, including silent, high-voltage, parallel-operation and gas-fueled variants.</p>
+        <p>Sets are assembled on Cummins, Weichai, Shangchai, Jichai and Yuchai engine platforms, among others. Engineering and production follow CAD / CAE / CAM methods.</p>
+        <ul>
+          <li><strong>3 – 3,000 kW</strong>Land diesel gensets</li>
+          <li><strong>15 – 600 kW</strong>Trailer-mounted mobile generators</li>
+          <li><strong>12 – 1,000 kW</strong>Marine emergency gensets</li>
+          <li><strong>Full range</strong>Silent, high-voltage, parallel-operation and gas-fueled variants</li>
+        </ul>
+      </div>
+      <div class="contact-box">
+        <h4>Contact Information</h4>
+        <p>Contact person: <strong>Mr. Lin</strong></p>
+        <p>Mobile / WhatsApp: <strong>+86 132 1907 3688</strong></p>
+        <p>Tel: <strong>+86 28 8610 3591</strong></p>
+        <p>Email: <strong>46469551@qq.com</strong></p>
+        <p>Address: Group 2, Gaoqiao Village, Anjing Town, Pidu District (formerly Pixian), Chengdu, Sichuan, China</p>
+        <p style="margin-top:10px;color:var(--navy);font-weight:600;">We support international inquiry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 能力与业务范围 ================= -->
+<section class="section" style="background:var(--grey-bg);">
+  <div class="container">
+    <h2 class="section-title">Capability &amp; Business Scope</h2>
+    <p class="section-sub">Assembly, engineering and full-lifecycle service under one company.</p>
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Manufacturing &amp; Engineering Capability</h3>
+        <ul>
+          <li><strong>Genset assembly line</strong> — open, silent, trailer and custom configurations</li>
+          <li><strong>Load testing</strong> — factory testing before delivery</li>
+          <li><strong>Engineering support</strong> — installation guidance, genset room design and power distribution design</li>
+          <li><strong>Product development</strong> follows CAD / CAE / CAM methods</li>
+        </ul>
+      </div>
+      <div class="info-box">
+        <h3>Business Scope</h3>
+        <ul>
+          <li><strong>Genset assembly</strong> — standard and custom-built sets</li>
+          <li><strong>Direct sales</strong> — new gensets across the full power range</li>
+          <li><strong>Rental</strong> — short- and long-term genset rental</li>
+          <li><strong>On-site repair &amp; maintenance</strong> — repair and maintenance service</li>
+          <li><strong>Engine sales &amp; service</strong> — Jichai, Weichai and Shangchai engines</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 厂区相册 ================= -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Factory Album</h2>
+    <p class="section-sub">Our showroom, production areas and factory environment.</p>
+    <div class="album-grid">
+      <div class="album-item"><img src="images/about_showroom.jpg" alt="Company showroom"></div>
+      <div class="album-item"><img src="images/about_factory1.jpg" alt="Factory area"></div>
+      <div class="album-item"><img src="images/about_silent_area.jpg" alt="Silent genset production area"></div>
+      <div class="album-item"><img src="images/about_factory2.jpg" alt="Factory area 2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 证书区（留白占位） ================= -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <h2 class="section-title">Certificates</h2>
+    <div class="cert-area">
+      <div class="cert-placeholder">[IMG: business license / certificate placeholder]</div>
+      <p>No compliance certification is claimed on this site. Documents will be added here when available.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA 横幅 ================= -->
+<section class="cta">
+  <div class="container">
+    <h2>Looking for a reliable genset supplier?</h2>
+    <p>We support international inquiry. Send us your requirements and we will respond within 24 hours.</p>
+    <a href="contact.html" class="btn-quote">Get Quote</a>
+  </div>
+</section>
+
+<!-- ================= Footer（全站统一） ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Sichuan Fukangsi Electric Power Technology Co., Ltd.</h4>
+        <p>Genset assembly, direct sales, rental and on-site repair &amp; maintenance service. Engineering and production follow CAD / CAE / CAM methods.</p>
+        <p style="margin-top:8px;">We support international inquiry.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cases.html">Project Cases</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Mr. Lin</p>
+        <p>Mobile / WhatsApp: +86 132 1907 3688</p>
+        <p>Tel: +86 28 8610 3591</p>
+        <p>Email: 46469551@qq.com</p>
+        <p>Group 2, Gaoqiao Village, Anjing Town, Pidu District (formerly Pixian), Chengdu, Sichuan, China</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Sichuan Fukangsi Electric Power Technology Co., Ltd. All rights reserved. We support international inquiry.</div>
+  </div>
+</footer>
+
+</body>
+</html>
