@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+     products.html — Sichuan Fukangsi Electric Power Technology Co., Ltd.
+     产品页 | Industrial B2B style (blue-grey) | Inline CSS only
+     修改提示：
+       - 文字：直接改下方 <body> 内的英文文本
+       - 图片：在 <img src="" alt="..."> 的 src 中填入图片路径
+       - 配色：修改 <style> 中 :root 的 CSS 变量
+       - 产品区块：每个 .product-card 为一个产品，含 Overview /
+         Key Features / Applications / Get Quote，可按需增删
+     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO: Meta Title / Meta Description（对应文案 §3） -->
+<title>Diesel Generator Sets, Silent Generators, Trailer Generators &amp; Marine Generators | Products</title>
+<meta name="description" content="Complete diesel genset range: land gensets 3-3000 kW, trailer-mounted mobile generators 15-600 kW, marine emergency gensets 12-1000 kW, plus silent, high-voltage, parallel and gas variants. Cummins, Weichai, Shangchai, Jichai series.">
+<meta name="keywords" content="diesel generator set, Cummins genset, silent generator, trailer generator, marine generator">
+<style>
+/* ============ CSS 变量：改这里即可调整全站配色 ============ */
+:root{
+  --navy:#1f3a5f;        /* 主深蓝 */
+  --navy-dark:#16293f;   /* 更深蓝（footer/导航hover） */
+  --steel:#3b5b7e;       /* 钢蓝（次级强调） */
+  --grey-bg:#eef1f5;     /* 浅灰背景 */
+  --grey-line:#d4dae2;   /* 分隔线 */
+  --white:#ffffff;
+  --text:#2b3340;        /* 正文深灰 */
+  --muted:#5c6a7a;       /* 辅助文字 */
+  --accent:#c0392b;      /* 按钮强调红（询盘按钮） */
+}
+/* ============ 基础重置 ============ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Segoe UI",Arial,Helvetica,sans-serif;color:var(--text);background:var(--white);line-height:1.65;font-size:16px;}
+img{max-width:100%;display:block;}
+a{color:var(--steel);text-decoration:none;}
+a:hover{color:var(--navy);}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;}
+/* ============ 顶部导航（全站统一） ============ */
+.site-header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,.15);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo a{color:#fff;font-size:17px;font-weight:700;line-height:1.3;display:block;}
+.logo span{display:block;font-size:11px;font-weight:400;color:#b9c8da;letter-spacing:.4px;margin-top:2px;}
+.nav{display:flex;gap:26px;}
+.nav a{color:#e6ecf3;font-size:14px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent;transition:.2s;}
+.nav a:hover,.nav a.active{color:#fff;border-bottom-color:#7fa6d3;}
+/* 移动端汉堡菜单 */
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px;}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;}
+@media(max-width:860px){
+  .nav-toggle{display:block;}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;padding:10px 20px 16px;gap:4px;}
+  .nav.open{display:flex;}
+  .nav a{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+}
+/* ============ 页面标题区 ============ */
+.page-head{background:linear-gradient(180deg,#16293f 0%,#1f3a5f 100%);color:#fff;padding:46px 0 40px;}
+.page-head h1{font-size:28px;font-weight:700;margin-bottom:10px;}
+.page-head p{color:#b9c8da;font-size:15px;max-width:820px;}
+/* ============ 通用区块标题 ============ */
+.section{padding:52px 0;}
+.section-title{font-size:24px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.section-sub{color:var(--muted);font-size:15px;margin-bottom:28px;max-width:760px;}
+.section-title::after{content:"";display:block;width:46px;height:3px;background:var(--steel);margin-top:10px;}
+/* ============ 功率矩阵表 ============ */
+.matrix-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--grey-line);border-radius:8px;overflow:hidden;}
+.matrix-table th{background:var(--navy);color:#fff;text-align:left;padding:12px 16px;font-size:14px;font-weight:600;}
+.matrix-table td{padding:12px 16px;border-top:1px solid var(--grey-line);font-size:14px;}
+.matrix-table tr:nth-child(even) td{background:var(--grey-bg);}
+/* ============ 分类导航（页面内锚点） ============ */
+.cat-nav{background:#fff;border:1px solid var(--grey-line);border-radius:8px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px;}
+.cat-nav a{font-size:14px;font-weight:500;background:var(--grey-bg);border:1px solid var(--grey-line);border-radius:4px;padding:6px 12px;color:var(--navy);}
+.cat-nav a:hover{background:var(--navy);color:#fff;}
+/* ============ 产品分类区块 ============ */
+.category-block{background:var(--grey-bg);border:1px solid var(--grey-line);border-radius:8px;padding:22px;margin-bottom:30px;}
+.category-block h2{font-size:21px;color:var(--navy);margin-bottom:6px;}
+.category-block>p{color:var(--muted);font-size:14px;margin-bottom:16px;}
+/* ============ 产品卡片 ============ */
+.product-card{background:#fff;border:1px solid var(--grey-line);border-radius:8px;padding:20px;margin-bottom:16px;box-shadow:0 2px 6px rgba(31,58,95,.05);}
+.product-card .pc-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:12px;}
+.product-card .ph{width:200px;height:130px;background:#dfe5ec;border-radius:6px;overflow:hidden;flex-shrink:0;}
+@media(max-width:640px){.product-card .pc-head{flex-direction:column;}.product-card .ph{width:100%;}}
+.product-card h3{font-size:18px;color:var(--navy);margin-bottom:4px;}
+.product-card .pc-sub{font-size:13px;color:var(--steel);font-weight:500;margin-bottom:8px;}
+.product-card h4{font-size:14px;color:var(--navy);margin:10px 0 4px;}
+.product-card p{font-size:14px;color:var(--text);}
+.product-card ul{font-size:14px;color:var(--text);padding-left:20px;margin:4px 0;}
+.product-card li{margin:3px 0;}
+.btn-quote{display:inline-block;margin-top:12px;padding:9px 20px;background:var(--accent);color:#fff;border-radius:4px;font-size:14px;font-weight:600;transition:.2s;}
+.btn-quote:hover{background:#a93226;color:#fff;}
+/* ============ CTA 横幅 ============ */
+.cta{background:var(--navy);color:#fff;text-align:center;padding:44px 20px;}
+.cta h2{font-size:24px;font-weight:700;margin-bottom:8px;}
+.cta p{color:#b9c8da;margin-bottom:18px;}
+/* ============ Footer（全站统一） ============ */
+.site-footer{background:var(--navy-dark);color:#aebbcb;padding:44px 0 20px;font-size:14px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px;margin-bottom:26px;}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr;}}
+.footer-grid h4{color:#fff;font-size:15px;margin-bottom:12px;}
+.footer-grid p,.footer-grid li{line-height:1.8;}
+.footer-grid ul{list-style:none;}
+.footer-grid a{color:#aebbcb;}
+.footer-grid a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;text-align:center;font-size:13px;color:#7f90a6;}
+</style>
+</head>
+<body>
+
+<!-- ================= 顶部导航（6 个页面互通） ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="home.html">Sichuan Fukangsi Electric Power<br>Technology Co., Ltd.</a>
+      <span>Diesel Generator Sets · Assembly · Sales · Rental · Service</span>
+    </div>
+    <nav class="nav" id="siteNav">
+      <a href="home.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cases.html">Project Cases</a>
+      <a href="about.html">About Us</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <button class="nav-toggle" onclick="document.getElementById('siteNav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= 页面标题区 ================= -->
+<section class="page-head">
+  <div class="container">
+    <h1>Products</h1>
+    <p>Complete diesel genset range for land, mobile and marine applications — main power, standby power, temporary power and emergency power. All sets are assembled and tested in our Chengdu facility. Please request a quotation for the exact specification sheet of your model.</p>
+  </div>
+</section>
+
+<!-- ================= 功率矩阵表 ================= -->
+<section class="section" style="padding-top:40px;">
+  <div class="container">
+    <h2 class="section-title">Product Range at a Glance</h2>
+    <p class="section-sub">Fixed power parameters, unchanged from the original product line.</p>
+    <table class="matrix-table">
+      <tr><th>Product line</th><th>Power range</th></tr>
+      <tr><td>Land diesel gensets</td><td>3 – 3,000 kW</td></tr>
+      <tr><td>Trailer-mounted mobile generators</td><td>15 – 600 kW</td></tr>
+      <tr><td>Marine emergency gensets</td><td>12 – 1,000 kW</td></tr>
+      <tr><td>Silent / high-voltage / parallel / gas variants</td><td>per base set</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= 分类快捷导航（锚点跳转） ================= -->
+<section class="section" style="padding:30px 0;">
+  <div class="container">
+    <h2 class="section-title">Categories</h2>
+    <div class="cat-nav">
+      <a href="#cat-gensets">Gensets</a>
+      <a href="#cat-diesel">Diesel Generator Sets</a>
+      <a href="#cat-silent">Silent Generator Sets</a>
+      <a href="#cat-cummins">Cummins Generator Sets</a>
+      <a href="#cat-yuchai">Yuchai Generator Sets</a>
+      <a href="#cat-shangchai">Shangchai Series</a>
+      <a href="#cat-weichai">Weichai Series</a>
+      <a href="#cat-jichai">Jichai Series</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     以下为 8 大分类 × 19 个产品完整信息
+     每个 .category-block = 一个分类；每个 .product-card = 一个产品
+     ================================================================ -->
+
+<!-- ========== 分类 1：Gensets ========== -->
+<section class="section" id="cat-gensets" style="padding-top:10px;">
+  <div class="container">
+    <div class="category-block">
+      <h2>1. Gensets</h2>
+      <p>A general genset line for main and standby power across commercial and industrial sites. Built on Tongchai (Shanghai Paou), Huachai Deutz, SDSTF Daewoo and Wuxi Power engines.</p>
+
+      <!-- 产品 1.1：通柴（上海帕欧） -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_tongchai.jpg" alt="Tongchai Shanghai Paou genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Tongchai (Shanghai Paou) Gensets</h3>
+            <div class="pc-sub">Power range: 100–650 kW</div>
+            <h4>Overview</h4>
+            <p>Gensets built on Nantong diesel engines of the Tongchai 135/138 series (branded Shanghai Paou; engine plant established 1958). The 135/138 series uses combustion technology licensed from AVL, improving cold startability and fuel economy; large models carry monitoring instruments with four protection functions and remote-control capability.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Four-stroke, water-cooled, direct injection, turbocharged, closed-circuit fan cooling, 1,500 rpm</li>
+              <li>Integral crankshaft and monobloc cylinder block, interchangeable with legacy 135-series engines</li>
+              <li>Recessed combustion chamber meets applicable emission indicators</li>
+              <li>Optimized lubrication and cooling systems</li>
+              <li>High-altitude capability with power derating below 3%</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Oil fields, mines, factories and institutions; main and standby power.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 1.2：华柴道依茨 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_huachai_deutz.jpg" alt="Huachai Deutz genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Huachai Deutz Gensets</h3>
+            <div class="pc-sub">Deutz air-cooled &amp; water-cooled engine platforms</div>
+            <h4>Overview</h4>
+            <p>Huachai introduced Deutz air-cooled diesel engines in 1979 (B/F413F), followed by B/F513F (1988), B/F513L (1992), the BFM1015 water-cooled series (2002) and the TCD2015 Euro-III engines (2005). Huachai also developed the HC4132 and HC6132 series on the 1015 platform. More than one hundred engineers have been trained at Deutz in Germany.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Air-cooled option: compact overall package, wide climate tolerance, fewer cooling-system failures, easy maintenance, rapid warm-up and lower cylinder wear</li>
+              <li>Water-cooled option covers BFM1015 / TCD2015</li>
+              <li>Technical cooperation with universities and research institutes</li>
+              <li>Note: air-cooled engines have higher operating noise than water-cooled types</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>General and standby power where compactness and climate adaptability are required.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 1.3：SDSTF 大宇 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_sdstf_daewoo.jpg" alt="SDSTF Daewoo series genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>SDSTF Daewoo Series Gensets</h3>
+            <div class="pc-sub">Competitive cost level, stable performance</div>
+            <h4>Overview</h4>
+            <p>Daewoo-series gensets assembled on SDSTF engines, offered at a competitive cost level.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Stable operating performance</li>
+              <li>Running quality and exhaust emission meet applicable national and international standards</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Main and standby power for general commercial and industrial use. Full specification sheet available on request.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 1.4：无锡动力 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_wuxi_power.jpg" alt="Wuxi Power series genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Wuxi Power Series Gensets</h3>
+            <div class="pc-sub">Power range: 128–880 kW</div>
+            <h4>Overview</h4>
+            <p>Wuxi Power Engineering Co., Ltd. is a major Chinese engine manufacturer (ISO 9001:1994 since 1995, ISO 9001:2000 in 2002, ISO/TS 16949 in 2003). The genset range uses AVL combustion technology.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Low fuel consumption, low noise and low emission</li>
+              <li>V-type high-power electronic-governor models with intelligent LCD display and multiple protection functions</li>
+              <li>110 after-sales service stations in China</li>
+              <li>Two-year engine warranty</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Oil, mining, enterprises and institutions; main and standby power.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类 2：Diesel Generator Sets ========== -->
+<section class="section" id="cat-diesel" style="padding-top:0;">
+  <div class="container">
+    <div class="category-block">
+      <h2>2. Diesel Generator Sets</h2>
+      <p>Diesel generator sets from the 100 kW class upward, built on SDSTF Wuxi Power and Googol (Keke) four-stroke engines.</p>
+
+      <!-- 产品 2.1：SDSTF 无锡动力柴油机组 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_sdstf_wuxi_diesel.jpg" alt="SDSTF Wuxi Power series diesel genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>SDSTF Wuxi Power Series Diesel Gensets</h3>
+            <div class="pc-sub">Main power &amp; standby power duty</div>
+            <h4>Overview</h4>
+            <p>Diesel gensets assembled on SDSTF Wuxi Power engines; suitable for both main power and standby power duty.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Stable performance, simple operation, easy maintenance</li>
+              <li>Meets requirements for continuous and standby power supply</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Factories, construction sites, commercial facilities.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 2.2：科克 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_keke.jpg" alt="Googol Keke diesel genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Googol (Keke) Diesel Gensets</h3>
+            <div class="pc-sub">Four-stroke, turbocharged configuration</div>
+            <h4>Overview</h4>
+            <p>Diesel gensets built on Googol (Keke) four-stroke turbocharged engines.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Four-stroke, turbocharged configuration for steady output</li>
+              <li>Robust construction for continuous duty</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Main and standby power for general industry.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类 3：Silent Generator Sets ========== -->
+<section class="section" id="cat-silent" style="padding-top:0;">
+  <div class="container">
+    <div class="category-block">
+      <h2>3. Silent Generator Sets</h2>
+      <p>Low-noise silent gensets, 30–800 kW, stationary and trailer-mounted mobile versions.</p>
+
+      <!-- 产品 3.1：移动式静音机组 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_mobile_silent.jpg" alt="Mobile silent generator set trailer" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Mobile Silent Gensets</h3>
+            <div class="pc-sub">Power range: 30–800 kW</div>
+            <h4>Overview</h4>
+            <p>Trailer-mounted mobile silent gensets, 30–800 kW, built for temporary and emergency power where the set must travel to site and operate quietly.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Welded trough-beam trailer frame</li>
+              <li>Leaf-spring suspension</li>
+              <li>Integral base fuel tank sized for approximately 8 hours of continuous operation</li>
+              <li>Sound-attenuated canopy</li>
+              <li>Complete control panel with standard protections</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Construction, municipal projects, field operations, events, temporary power supply.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 3.2：固定式静音机组 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_silent_stationary.jpg" alt="Stationary silent genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Silent Gensets (Stationary)</h3>
+            <div class="pc-sub">Power range: 30–800 kW</div>
+            <h4>Overview</h4>
+            <p>Stationary sound-attenuated gensets, 30–800 kW, for sites where noise control is required.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Acoustic canopy reduces radiated noise</li>
+              <li>Full control and protection package</li>
+              <li>Factory-tested before delivery</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Hospitals, hotels, schools, residential and commercial buildings, data centers — quiet standby power.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类 4：Cummins Generator Sets ========== -->
+<section class="section" id="cat-cummins" style="padding-top:0;">
+  <div class="container">
+    <div class="category-block">
+      <h2>4. Cummins Generator Sets</h2>
+      <p>Cummins gensets assembled and sold by our factory. Engine displacement 1.4–91 L, covering the 31–3,500 hp class.</p>
+
+      <!-- 产品 4.1：成都康明斯 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_cummins_chengdu.jpg" alt="Cummins genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Chengdu Cummins Gensets</h3>
+            <div class="pc-sub">Cummins engine displacement 1.4–91 L · 31–3,500 hp class</div>
+            <h4>Overview</h4>
+            <p>Gensets powered by Cummins diesel engines, with assembly, testing and installation engineering support from our Chengdu facility.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Cooling system engineering: intake opening not less than 2.2× radiator face area; exhaust opening 1.5× radiator area with louvres and baffle</li>
+              <li>Flexible duct flanges absorb vibration and prevent noise transmission</li>
+              <li>Derating considered when ambient temperature exceeds design value</li>
+              <li>Noise treatment options: reinforced-concrete plinth base, base fuel tank with vibration isolators, or vibration-isolated foundation</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Standby and main power for factories, commercial buildings, data centers and construction sites.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 4.2：康明斯 OEM 成套 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_cummins_oem.jpg" alt="Cummins genset assembly line" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Cummins Genset Solutions (OEM Assembly)</h3>
+            <div class="pc-sub">Built to customer specification</div>
+            <h4>Overview</h4>
+            <p>We assemble Cummins-based gensets to customer specification — power, voltage, canopy type, control system and accessories.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Factory assembly and load testing</li>
+              <li>Flexible configuration: open, silent, trailer, high-voltage, parallel</li>
+              <li>Documentation and spare parts support</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Project-based supply for contractors, EPC projects and distributors.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 4.3：标准康明斯 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_cummins_standard.jpg" alt="Cummins genset standard range" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Cummins Gensets</h3>
+            <div class="pc-sub">Standard-range units</div>
+            <h4>Overview</h4>
+            <p>Standard-range Cummins gensets for commercial and industrial users.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Proven engine platform</li>
+              <li>Wide power coverage</li>
+              <li>Full specification sheets available on request</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>General standby and main power.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类 5：Yuchai Generator Sets ========== -->
+<section class="section" id="cat-yuchai" style="padding-top:0;">
+  <div class="container">
+    <div class="category-block">
+      <h2>5. Yuchai Generator Sets</h2>
+      <p>Yuchai gensets covering five application classes and twelve engine series.</p>
+
+      <!-- 产品 5.1：成都玉柴 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_yuchai.jpg" alt="Yuchai genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Chengdu Yuchai Gensets</h3>
+            <div class="pc-sub">Twelve engine series</div>
+            <h4>Overview</h4>
+            <p>Yuchai engines cover five application classes — vehicle, construction machinery, agricultural machinery, marine and power generation — across twelve series: YC6G, YC4G, YC4E (US technology platform); YC61L, YC6A, YC6B, YC6J, YC4lB, YC4D, YC4lF, YC4W (German technology platform); and YC6M.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>High power and torque output; high reliability</li>
+              <li>Low fuel consumption, low emission and low noise</li>
+              <li>Widely adopted by domestic and international genset manufacturers</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>General and standby power; OEM and machinery applications.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类 6：Shangchai Series ========== -->
+<section class="section" id="cat-shangchai" style="padding-top:0;">
+  <div class="container">
+    <div class="category-block">
+      <h2>6. Shangchai Series</h2>
+      <p>Gensets built on Shangchai (SDEC Dongfeng), MTU, Perkins and Deutz engines.</p>
+
+      <!-- 产品 6.1：成都上柴 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_shangchai.jpg" alt="Shangchai genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Chengdu Shangchai Gensets</h3>
+            <div class="pc-sub">Power range: 60–600 kW</div>
+            <h4>Overview</h4>
+            <p>Gensets built on Shanghai Diesel Engine Co. (SDEC) "Dongfeng" engines — among the earliest and most widely used diesel engines in China.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Mature technology with easy parts availability</li>
+              <li>Configurations include inline 4-cylinder, inline 6-cylinder and V12</li>
+              <li>Long-term cooperation with SDEC</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Main and standby power for factories, buildings and utilities.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 6.2：MTU 大功率 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_mtu.jpg" alt="MTU series high power genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>MTU Series High-Power Gensets</h3>
+            <div class="pc-sub">DaimlerChrysler / Mercedes-Benz MTU electronic-injection engines</div>
+            <h4>Overview</h4>
+            <p>High-power gensets assembled on MTU (DaimlerChrysler / Mercedes-Benz) electronic-injection diesel engines.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Electronic fuel injection</li>
+              <li>High power density; long service life</li>
+              <li>Environmental performance in line with the MTU platform</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Large data centers, hospitals, industrial plants and other high-demand standby applications.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 6.3：珀金斯 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_perkins.jpg" alt="Perkins diesel genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Perkins Diesel Gensets</h3>
+            <div class="pc-sub">400 / 1100 / 1300 / 2000 / 4000 series</div>
+            <h4>Overview</h4>
+            <p>Gensets built on original Perkins engines — 400, 1100, 1300, 2000 and 4000 series, produced to Perkins' global quality standards.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Stability, reliability and durability; long service life</li>
+              <li>Lower operating cost</li>
+              <li>Backed by the worldwide Perkins service network</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Telecommunications, industry, outdoor engineering, mining, emergency rescue and military sites.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 6.4：道依茨 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_deutz.jpg" alt="Deutz genset series" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Deutz Genset Series</h3>
+            <div class="pc-sub">400,000+ engines of these series in service worldwide</div>
+            <h4>Overview</h4>
+            <p>Deutz-technology engines combine compact design, high output, fuel economy, environmental adaptability and high reliability.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Low fuel consumption; small size and light weight</li>
+              <li>High reliability and durability; low vibration and noise; simple maintenance</li>
+              <li>Standard power ratings: 400/230 V, 3-phase 4-wire; 50/60 Hz; power factor 0.8 (lagging)</li>
+              <li>Per ISO 3046 / GB 1105 / GB 2820; 100 kPa at altitude 100 m; ambient 5–45 °C; relative humidity 60%; rated output available at altitude ≤1,000 m and 25 °C</li>
+            </ul>
+            <h4>After-Sales Commitment</h4>
+            <p>Genuine spare parts, technical consultation, installation guidance, free commissioning, set modification and operator training; response to quality feedback within 24 hours; free genset room design and power distribution design; customer file with periodic inspection.</p>
+            <h4>Applications</h4>
+            <p>Main and standby power for general commercial and industrial use.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类 7：Weichai Series ========== -->
+<section class="section" id="cat-weichai" style="padding-top:0;">
+  <div class="container">
+    <div class="category-block">
+      <h2>7. Weichai Series</h2>
+      <p>Weichai gensets with low fuel consumption, high torque and easy starting; low-noise versions available.</p>
+
+      <!-- 产品 7.1：潍柴发电机组 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_weichai.jpg" alt="Weichai genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Weichai Gensets</h3>
+            <div class="pc-sub">Documented pre-delivery inspection &amp; commissioning</div>
+            <h4>Overview</h4>
+            <p>Weichai gensets with defined pre-delivery inspection and commissioning procedures.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Visual inspection of set, instruments and cable joints</li>
+              <li>Pre-start checks of coolant, fuel and pipe joints</li>
+              <li>Manual then automatic commissioning; no-load and load tests</li>
+              <li>Verification of protection functions</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Main and standby power where documented commissioning is required.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+
+      <!-- 产品 7.2：成都潍柴 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_weichai_chengdu.jpg" alt="Chengdu Weichai genset low noise" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Chengdu Weichai Gensets</h3>
+            <div class="pc-sub">Joint-venture plant, low-noise versions available</div>
+            <h4>Overview</h4>
+            <p>Weichai gensets from the joint-venture plant developed from the No. 2 Engine Plant of Weifang Diesel Engine Works.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Low fuel consumption; high reliability; high torque</li>
+              <li>Easy starting; simple operation and maintenance</li>
+              <li>Available as low-noise (silent) versions</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>General and standby power, including noise-sensitive sites.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 分类 8：Jichai Series ========== -->
+<section class="section" id="cat-jichai" style="padding-top:0;">
+  <div class="container">
+    <div class="category-block">
+      <h2>8. Jichai Series</h2>
+      <p>Heavy-duty gensets assembled on CNPC Jichai 190-series engines.</p>
+
+      <!-- 产品 8.1：济柴发电机组 -->
+      <div class="product-card">
+        <div class="pc-head">
+          <div class="ph"><img src="images/product_jichai.jpg" alt="Jichai genset" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div>
+            <h3>Jichai Gensets</h3>
+            <div class="pc-sub">CNPC Jichai 190-series engines</div>
+            <h4>Overview</h4>
+            <p>Gensets assembled on CNPC Jichai 190-series engines.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>High reliability; strong power output</li>
+              <li>Readily available spare parts; long service life</li>
+            </ul>
+            <h4>Applications</h4>
+            <p>Heavy-duty industrial, mining, oil-field and continuous-duty power.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-quote">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA 横幅 ================= -->
+<section class="cta">
+  <div class="container">
+    <h2>Need a specification sheet or a quotation?</h2>
+    <p>We support international inquiry. Send us your load requirement and we will respond within 24 hours.</p>
+    <a href="contact.html" class="btn-quote">Get Quote</a>
+  </div>
+</section>
+
+<!-- ================= Footer（全站统一） ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Sichuan Fukangsi Electric Power Technology Co., Ltd.</h4>
+        <p>Genset assembly, direct sales, rental and on-site repair &amp; maintenance service. Engineering and production follow CAD / CAE / CAM methods.</p>
+        <p style="margin-top:8px;">We support international inquiry.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cases.html">Project Cases</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Mr. Lin</p>
+        <p>Mobile / WhatsApp: +86 132 1907 3688</p>
+        <p>Tel: +86 28 8610 3591</p>
+        <p>Email: 46469551@qq.com</p>
+        <p>Group 2, Gaoqiao Village, Anjing Town, Pidu District (formerly Pixian), Chengdu, Sichuan, China</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Sichuan Fukangsi Electric Power Technology Co., Ltd. All rights reserved. We support international inquiry.</div>
+  </div>
+</footer>
+
+</body>
+</html>
